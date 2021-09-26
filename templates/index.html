@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block titleis %} Index {% endblock titleis %}
+{% block navigation %}
+<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="about">About</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="services">Services</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="Contact">Contact</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </li>
+</ul>
+{% endblock navigation %}
+{% block body %}
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" >
+        <div class="carousel-item active" style="max-height: 100vh; max-width: 100vw; scroll-behavior: smooth;">
+            <img src="https://source.unsplash.com/1600x900/?nature,girls,blast,glass,airplane
+"   class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item " style="max-height: 100vh; max-width: 100vw; object-fit: scale-down;">
+            <img src="https://source.unsplash.com/1600x900/?girls,nature,car,phone,aircraft
+" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="max-height: 100vh; max-width: 100vw; object-fit: scale-down;">
+            <img src="https://source.unsplash.com/1600x900/?boy,girls,fire
+" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{% endblock body %}
+{% block name %}Index{% endblock name %}

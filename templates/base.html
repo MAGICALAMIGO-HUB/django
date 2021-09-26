@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is the index page</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Hello user you are in Index page</h1>
+    <h1 style="text-align: center;">hello <br>This:- {{veriable}}</br><br>This:- {{veriable1}}</br></h1>
+    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat suscipit odio maiores eum aperiam nostrum vitae reiciendis impedit obcaecati officia culpa quasi laborum quis eaque doloribus soluta, totam placeat corrupti id perferendis natus accusamus atque nesciunt dolorum! Distinctio animi saepe voluptatum nulla itaque nesciunt corrupti quod molestias sed expedita dicta error, beatae quasi ab veniam iusto ipsam tempore facilis dolor quae accusamus eum provident voluptatem qui! Nesciunt fugiat voluptatem sunt obcaecati, repellendus provident molestiae sapiente ducimus atque quaerat voluptatibus ipsam et non rem ipsum ratione. Quia cum nostrum iure corporis aperiam quidem assumenda sit delectus quasi eveniet fuga vero rerum voluptate laborum perspiciatis ab autem deserunt dicta sequi molestias, ullam possimus quo quisquam ipsa. Earum maxime quaerat a quo, voluptate culpa id autem dicta delectus, nisi, minima quae quisquam provident aperiam voluptatem vero! Fugiat ex modi dignissimos soluta repellendus. Natus numquam nemo cupiditate nobis sapiente, dignissimos dolorum odit quibusdam culpa itaque odio tempore nisi. Fuga accusantium, ut quas perferendis eligendi vel in consectetur magnam repudiandae similique quisquam. Ab velit maiores voluptate voluptatibus, pariatur reprehenderit nesciunt expedita totam ut consectetur distinctio officiis quis sapiente exercitationem temporibus possimus error eos nobis optio inventore! Placeat eaque quibusdam tempore adipisci, saepe quidem distinctio exercitationem? Unde cum quaerat dolor nobis nam minima atque rem cumque quo reprehenderit, illo dolorem recusandae quod sequi mollitia ratione! Dolore consequuntur esse iusto quae mollitia officiis nemo neque necessitatibus nobis autem, impedit minima accusamus nisi quam iure, eos ullam tempora numquam qui. Magni suscipit commodi fugit optio vitae autem id delectus libero molestiae rerum rem obcaecati vero nam consectetur sint eum, quibusdam pariatur quia illum veritatis cupiditate, dignissimos itaque est! Corrupti perferendis quia delectus consequuntur quod sed consequatur modi ullam sunt voluptatum possimus voluptatibus iusto culpa beatae praesentium fugit rerum, ipsa error officia! Commodi perspiciatis inventore, eligendi veniam tenetur, eveniet magni natus voluptatem totam at pariatur assumenda ipsam, quam dolore ab velit minus. Voluptatibus eaque veritatis rem eius maiores voluptates ducimus nostrum perspiciatis! Autem, veniam? Sequi ipsa aut esse delectus unde, porro, maxime earum suscipit temporibus odit vel alias blanditiis necessitatibus aspernatur ratione, error hic. Perspiciatis voluptatibus voluptatum doloremque rem excepturi consectetur temporibus? Incidunt iure illum rem fugiat beatae molestias ipsum iste quisquam alias consectetur. Officia doloremque officiis, optio magni dolore impedit aut dolores. Minus deserunt perferendis ducimus dolorum provident tempora maxime enim veritatis, dolores sequi eum tempore expedita necessitatibus nostrum corrupti quam repellat, quasi commodi aliquam veniam facere nobis reiciendis. Nobis facilis molestias asperiores, assumenda, nostrum illum tenetur enim, expedita qui molestiae accusamus deleniti esse libero amet quae dolore. Saepe voluptatibus adipisci fuga corrupti? Placeat sapiente et debitis neque ex totam, tenetur asperiores officiis ipsa quasi eaque, aliquid nihil laborum? Quas corporis eligendi iure nam repellendus dolor nobis doloribus in, delectus dolorem iusto magni!</h4>
+</body>
+</html> -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title> {% block titleis %}{% endblock titleis %} / Anish Learning Django</title>
+</head>
+
+<body>
+   
+    <nav class="navbar navbar-light bg-light fixed-top">
+
+        <div class="container-fluid">
+            <div class="container-fluid" style="transform: translateY(3vh);">
+                <a class="navbar-brand" href="#">
+                    <img src="https://nextsoftware.io/files/images/logos/main/django-logo.png" alt="" width="50"
+                        height="25" class="d-inline-block align-text-top">
+                    Anish is learning
+                </a>
+            </div>
+            
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">My Project</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    {% block navigation %}{% endblock navigation %}
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    {% comment %} <div style="transform: translateY(15vh); height:100%; width:100%;position: absolute;overflow: hidden"> {% endcomment %}
+    <div>
+  {% block body %}{% endblock body %}
+    {% block toUpload %}{% endblock toUpload %}
+      
+
+        <h1 style="text-align: center;">Hello user you are in {% block name %}{% endblock name %} page</h1>
+        <p style="text-align: center;">Today is <br>{{veriable}}</br><br>{{veriable1}}
+        {% block forloop2 %}{% endblock forloop2 %}</br></p>
+        {% block forloop %}{% endblock forloop %}
+      
+        
+        {% comment %} <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat suscipit odio maiores eum aperiam nostrum
+            vitae reiciendis impedit obcaecati officia culpa quasi laborum quis eaque doloribus soluta, totam placeat
+            corrupti id perferendis natus accusamus atque nesciunt dolorum! Distinctio animi saepe voluptatum nulla
+            itaque nesciunt corrupti quod molestias sed expedita dicta error, beatae quasi ab veniam iusto ipsam tempore
+            facilis dolor quae accusamus eum provident voluptatem qui! Nesciunt fugiat voluptatem sunt obcaecati,
+            repellendus provident molestiae sapiente ducimus atque quaerat voluptatibus ipsam et non rem ipsum ratione.
+            Quia cum nostrum iure corporis aperiam quidem assumenda sit delectus quasi eveniet fuga vero rerum voluptate
+            laborum perspiciatis ab autem deserunt dicta sequi molestias, ullam possimus quo quisquam ipsa. Earum maxime
+            quaerat a quo, voluptate culpa id autem dicta delectus, nisi, minima quae quisquam provident aperiam
+            voluptatem vero! Fugiat ex modi dignissimos soluta repellendus. Natus numquam nemo cupiditate nobis
+            sapiente, dignissimos dolorum odit quibusdam culpa itaque odio tempore nisi. Fuga accusantium, ut quas
+            perferendis eligendi vel in consectetur magnam repudiandae similique quisquam. Ab velit maiores voluptate
+            voluptatibus, pariatur reprehenderit nesciunt expedita totam ut consectetur distinctio officiis quis
+            sapiente exercitationem temporibus possimus error eos nobis optio inventore! Placeat eaque quibusdam tempore
+            adipisci, saepe quidem distinctio exercitationem? Unde cum quaerat dolor nobis nam minima atque rem cumque
+            quo reprehenderit, illo dolorem recusandae quod sequi mollitia ratione! Dolore consequuntur esse iusto quae
+            mollitia officiis nemo neque necessitatibus nobis autem, impedit minima accusamus nisi quam iure, eos ullam
+            tempora numquam qui. Magni suscipit commodi fugit optio vitae autem id delectus libero molestiae rerum rem
+            obcaecati vero nam consectetur sint eum, quibusdam pariatur quia illum veritatis cupiditate, dignissimos
+            itaque est! Corrupti perferendis quia delectus consequuntur quod sed consequatur modi ullam sunt voluptatum
+            possimus voluptatibus iusto culpa beatae praesentium fugit rerum, ipsa error officia! Commodi perspiciatis
+            inventore, eligendi veniam tenetur, eveniet magni natus voluptatem totam at pariatur assumenda ipsam, quam
+            dolore ab velit minus. Voluptatibus eaque veritatis rem eius maiores voluptates ducimus nostrum
+            perspiciatis! Autem, veniam? Sequi ipsa aut esse delectus unde, porro, maxime earum suscipit temporibus odit
+            vel alias blanditiis necessitatibus aspernatur ratione, error hic. Perspiciatis voluptatibus voluptatum
+            doloremque rem excepturi consectetur temporibus? Incidunt iure illum rem fugiat beatae molestias ipsum iste
+            quisquam alias consectetur. Officia doloremque officiis, optio magni dolore impedit aut dolores. Minus
+            deserunt perferendis ducimus dolorum provident tempora maxime enim veritatis, dolores sequi eum tempore
+            expedita necessitatibus nostrum corrupti quam repellat, quasi commodi aliquam veniam facere nobis
+            reiciendis. Nobis facilis molestias asperiores, assumenda, nostrum illum tenetur enim, expedita qui
+            molestiae accusamus deleniti esse libero amet quae dolore. Saepe voluptatibus adipisci fuga corrupti?
+            Placeat sapiente et debitis neque ex totam, tenetur asperiores officiis ipsa quasi eaque, aliquid nihil
+            laborum? Quas corporis eligendi iure nam repellendus dolor nobis doloribus in, delectus dolorem iusto magni!
+        </h4> {% endcomment %}
+    </div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
